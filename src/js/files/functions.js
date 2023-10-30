@@ -3,7 +3,7 @@ import { flsModules } from "./modules.js";
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
 export function isWebp() {
-	// Проверка поддержки webp 
+	// Проверка поддержки webp
 	function testWebP(callback) {
 		let webP = new Image();
 		webP.onload = webP.onerror = function () {
@@ -80,7 +80,7 @@ export let _slideUp = (target, duration = 500, showmore = 0) => {
 			target.style.removeProperty('transition-duration');
 			target.style.removeProperty('transition-property');
 			target.classList.remove('_slide');
-			// Створюємо подію 
+			// Створюємо подію
 			document.dispatchEvent(new CustomEvent("slideUpDone", {
 				detail: {
 					target: target
@@ -749,4 +749,8 @@ export function dataMediaQueries(array, dataSetValue) {
 		}
 	}
 }
+export function getHeaderHeight() {
+	const headerHeight = document?.querySelector('.header').offsetHeight;
+	document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
+  }
 //================================================================================================================================================================================================================================================================================================================

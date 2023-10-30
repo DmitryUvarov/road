@@ -42,6 +42,8 @@ flsFunctions.menuInit();
 /* Форматування чисел */
 // import './libs/wNumb.min.js';
 
+// flsFunctions.getHeaderHeight();
+
 /*
 Модуль "Спойлери"
 Документація: https://template.fls.guru/template-docs/modul-spojlery.html
