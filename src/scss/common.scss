@@ -1,1 +1,15 @@
 // Заголовки, загальні БЕМ блоки та інше...
+
+.title {
+  color: #262626;
+  font-family: "Inter";
+  @include adaptiveValue("font-size", 40, 30);
+  font-weight: 800;
+  line-height: 130%; /* 130% */
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+
+  span {
+    color: #cc1515;
+  }
+}
