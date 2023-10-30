@@ -3,7 +3,7 @@
 .title {
   color: #262626;
   font-family: "Inter";
-  @include adaptiveValue("font-size", 40, 30);
+  @include adaptiveValue("font-size", 40, 25);
   font-weight: 800;
   line-height: 130%; /* 130% */
   letter-spacing: 0.8px;

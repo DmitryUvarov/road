@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay,
@@ -28,7 +28,7 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.1234342')) {
+	if (document.querySelector('.swiper12')) {
 			new Swiper('.12324234', {
 			modules: [Navigation],
 			observer: true,
@@ -104,6 +104,53 @@ function initSliders() {
 			}
 		});
 	}
+
+
+	for (const mobileSlider of document.querySelectorAll('.partners__items')) {
+        if (mobileSlider) {
+            (function () {
+                "use strict";
+
+                const breakpoint = window.matchMedia("(min-width:768px)");
+                let slider;
+
+                const enableSwiper = function () {
+                    slider = new Swiper(mobileSlider, {
+                        modules: [Autoplay],
+						observer: true,
+						observeParents: true,
+						slidesPerView: "auto",
+						spaceBetween: 30,
+
+						speed: 2000,
+						loop: true,
+						allowTouchMove: false,
+
+						autoplay: {
+							delay: 0,
+							disableOnInteraction: false,
+						},
+
+                    });
+                };
+				console.log(mobileSlider)
+                const breakpointChecker = function () {
+                    if (breakpoint.matches === true) {
+                        if (slider !== undefined) slider.destroy(true, true);
+
+                        return;
+                    } else if (breakpoint.matches === false) {
+                        return enableSwiper();
+                    }
+                };
+
+                breakpoint.addListener(breakpointChecker);
+                breakpointChecker();
+            })();
+        }
+
+    }
+
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {

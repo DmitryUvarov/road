@@ -37,6 +37,18 @@
     }
   }
 
+  &_white {
+    background-color: #fff;
+    color: #262626;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: rgba(255, 255, 255, 0.3) 0 toRem(4) toRem(12);
+      }
+    }
+  }
+
   &--fw {
     width: 100%;
   }
