@@ -133,7 +133,7 @@ function initSliders() {
 
                     });
                 };
-				console.log(mobileSlider)
+
                 const breakpointChecker = function () {
                     if (breakpoint.matches === true) {
                         if (slider !== undefined) slider.destroy(true, true);

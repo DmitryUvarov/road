@@ -53,3 +53,24 @@
     width: 100%;
   }
 }
+
+.button-line {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  @include adaptiveValue("min-height", 65, 45);
+  border-radius: toRem(10);
+  border: toRem(1) solid #9b9b9b;
+  width: 100%;
+
+  color: #131010;
+  font-family: "Inter";
+  font-size: toRem(16);
+  font-weight: 600;
+  line-height: 20.752px; /* 125% */
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    background-color: #9b9b9b;
+  }
+}
