@@ -17,3 +17,21 @@
     color: #ffffff;
   }
 }
+
+//========================================================================================================================================================
+
+.social {
+  display: flex;
+  @include adaptiveValue("gap", 20, 15);
+  &__link {
+    color: #fff;
+    @include adaptiveValue("font-size", 50, 45);
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #cc1515;
+      }
+    }
+  }
+}
