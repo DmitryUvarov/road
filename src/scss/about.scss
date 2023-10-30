@@ -1,0 +1,131 @@
+.advantages {
+  @include adaptiveValue("padding-top", 120, 40);
+  @include adaptiveValue("padding-bottom", 120, 40);
+  &__container {
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: toRem(15);
+    row-gap: toRem(30);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: em(600)) {
+      grid-template-columns: 1fr;
+      row-gap: toRem(15);
+    }
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    min-height: toRem(350);
+    border-radius: 30px;
+    padding: toRem(45) toRem(20) toRem(55);
+    background: linear-gradient(142deg, #cc1515 2.95%, #262626 46.27%);
+
+    display: flex;
+
+    @media (max-width: $mobile) {
+      min-height: toRem(250);
+    }
+
+    &_1 {
+      align-items: flex-end;
+      background: linear-gradient(142deg, #cc1515 2.95%, #262626 46.27%);
+
+      .advantages__item-image {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+
+        img {
+          object-position: right;
+        }
+      }
+    }
+
+    &_2 {
+      align-items: flex-end;
+
+      background: linear-gradient(248deg, #cc1515 1.53%, #262626 33.14%);
+
+      @media (min-width: $mobile) {
+        grid-column: 2 / 4;
+      }
+    }
+
+    &_3 {
+      .advantages__item-image {
+        width: percent(220, 390);
+        height: percent(220, 390);
+        bottom: 0;
+        right: 0;
+        top: auto;
+
+        img {
+        }
+      }
+    }
+
+    &_4 {
+      .advantages__item-image {
+        width: percent(300, 390);
+        height: percent(300, 390);
+        bottom: 0;
+        right: 0;
+        top: auto;
+
+        img {
+        }
+      }
+    }
+
+    &_5 {
+      .advantages__item-image {
+        width: percent(270, 390);
+        height: percent(270, 390);
+        bottom: 0;
+        right: 0;
+        top: auto;
+
+        img {
+          object-position: bottom right;
+        }
+      }
+    }
+  }
+
+  &__item-title {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    @include adaptiveValue("font-size", 30, 20, 0, 1230, 767);
+    font-weight: 600;
+    line-height: 130%; /* 39px */
+    letter-spacing: 0.36px;
+  }
+
+  &__item-image {
+    position: absolute;
+    width: percent(250, 390);
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: contain;
+      object-position: right;
+    }
+  }
+}
