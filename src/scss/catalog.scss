@@ -245,3 +245,37 @@
     }
   }
 }
+
+//========================================================================================================================================================
+
+.catalog {
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 100, 40);
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 70, 40);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
+    column-gap: toRem(16);
+    row-gap: toRem(30);
+  }
+
+  &__item {
+    border: toRem(1) solid #9b9b9b;
+    padding: toRem(24) toRem(30);
+    border-radius: toRem(30);
+
+    .item-product__image-ibg--contain {
+      border: 0;
+
+      @media (any-hover: hover) {
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
