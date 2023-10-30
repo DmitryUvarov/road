@@ -24,6 +24,10 @@
     }
   }
 
+  &_noabsolute {
+    position: relative;
+  }
+
   &__container {
   }
 

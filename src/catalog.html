@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Каталог товаров"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{
+        "header_class":"header_noabsolute"
+        })
+        <main class="page">
+
+            <section class="category">
+                <div class="category__container">
+                    <div class="category__items">
+                        <a href="#" class="category__item">
+                            <div class="category__item-ico"><img src="@img/category/01.svg" alt=""></div>Фильтры
+                        </a>
+                        <a href="#" class="category__item">
+                            <div class="category__item-ico"><img src="@img/category/02.svg" alt=""></div>Батареи
+                        </a>
+                        <a href="#" class="category__item">
+                            <div class="category__item-ico"><img src="@img/category/03.svg" alt=""></div>Колодки
+                        </a>
+                        <a href="#" class="category__item">
+                            <div class="category__item-ico"><img src="@img/category/04.svg" alt=""></div>Масло
+                        </a>
+                        <a href="#" class="category__item">
+                            <div class="category__item-ico"><img src="@img/category/05.svg" alt=""></div>Радиаторы
+                        </a>
+                        <a href="#" class="category__item">
+                            <div class="category__item-ico"><img src="@img/category/06.svg" alt=""></div>Амортизаторы
+                        </a>
+                        <a href="#" class="category__item">
+                            <div class="category__item-ico"><img src="@img/category/07.svg" alt=""></div>Аксессуары
+                        </a>
+                        <a href="#" class="category__item">
+                            <div class="category__item-ico"><img src="@img/category/08.svg" alt=""></div>Другое
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="filter">
+                <div class="filter__container">
+                    <h2 class="filter__title">Фильтр поиска</h2>
+                    <div class="filter__wrapper">
+                        <div class="filter__body">
+                            <select name="form[]" class="filter__select">
+                                <option value="1" selected>Марка</option>
+                                <option value="2">Марка 1</option>
+                                <option value="3">Марка 2</option>
+                                <option value="4">Марка 3</option>
+                            </select>
+                            <select name="form[]" class="filter__select">
+                                <option value="1" selected>Модель</option>
+                                <option value="2">Модель Модель 1 </option>
+                                <option value="3">Модель Модель 2</option>
+                                <option value="4">Модель Модель 3</option>
+                            </select>
+                            <select name="form[]" class="filter__select">
+                                <option value="1" selected>Год выпуска</option>
+                                <option value="2">Год выпуска 1</option>
+                                <option value="3">Год выпуска 2</option>
+                                <option value="4">Марка 3</option>
+                            </select>
+                            <select name="form[]" class="filter__select">
+                                <option value="1" selected>VIN-номер</option>
+                                <option value="2">VIN-номер 1</option>
+                                <option value="3">VIN-номер 2</option>
+                                <option value="4">VIN-номер 2</option>
+                            </select>
+                            <button type="submit" class="filter__button">Искать</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="step">
+                <div class="step__container">
+                    <h2 class="step__title title title_white">Заказ автозапчасти в 4 шага</h2>
+                    <div class="step__items">
+                        <div class="step__item item-step">
+                            <div class="item-step__ico"><img src="@img/step/01.svg" alt=""></div>
+                            <div class="item-step__text">Вы оставляете заявку <br> в нашем Telegram - боте</div>
+                        </div>
+                        <div class="step__item item-step">
+                            <div class="item-step__ico"><img src="@img/step/02.svg" alt=""></div>
+                            <div class="item-step__text">Мы связываемся <br> с вами</div>
+                        </div>
+                        <div class="step__item item-step">
+                            <div class="item-step__ico"><img src="@img/step/03.svg" alt=""></div>
+                            <div class="item-step__text">Оплачиваете удобным <br> для вас способом</div>
+                        </div>
+                        <div class="step__item item-step">
+                            <div class="item-step__ico"><img src="@img/step/04.svg" alt=""></div>
+                            <div class="item-step__text">Мы доставляем <br> запчасть</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- <section class="test">
+				<div class="test__container">
+					<div class="test__body">
+
+					</div>
+				</div>
+			</section> -->
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
