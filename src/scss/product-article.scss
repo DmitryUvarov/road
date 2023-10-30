@@ -1,0 +1,135 @@
+.product {
+  @include adaptiveValue("padding-top", 60, 40);
+  @include adaptiveValue("padding-bottom", 90, 40);
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    gap: toRem(30);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 70, 40);
+
+    color: #000;
+    @include adaptiveValue("font-size", 40, 25);
+    font-weight: 800;
+    line-height: 130%; /* 130% */
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  &__sliders {
+    @include adaptiveValue("gap", 60, 30, 0, 1230, 991);
+
+    @media (min-width: $tablet) {
+      flex: 1 1 toRem(690);
+    }
+    @media (max-width: $tablet) {
+      max-width: toRem(690);
+      margin: 0 auto;
+      width: 100%;
+    }
+    @media (min-width: $mobile) {
+      grid-template-columns: percent(100, 690) percent(530, 690);
+      grid-template-rows: toRem(530);
+      display: grid;
+    }
+  }
+
+  &__slider-trumb {
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__slide-trumb-ibg--contain {
+    cursor: pointer;
+    padding-bottom: 100%;
+    position: relative;
+
+    border-radius: toRem(10);
+    overflow: hidden;
+  }
+
+  &__slider {
+    @media (max-width: $mobile) {
+      border: toRem(1) solid #9b9b9b;
+      border-radius: toRem(25);
+    }
+  }
+
+  &__slide-ibg--contain {
+    padding-bottom: 100%;
+    position: relative;
+    border-radius: toRem(30);
+    overflow: hidden;
+  }
+
+  &__content {
+  }
+
+  &__slider-pagination {
+    justify-content: center;
+    margin: toRem(20) 0;
+
+    @media (min-width: $mobile) {
+      display: none;
+    }
+  }
+}
+
+.trumb-slide-product {
+}
+
+.slide-product {
+}
+
+.content-product {
+  &__title {
+    color: #101010;
+    @include adaptiveValue("font-size", 30, 20);
+    font-weight: 600;
+    line-height: 130%; /* 39px */
+    letter-spacing: 0.36px;
+    margin-bottom: toRem(20);
+  }
+
+  &__subtitle {
+    margin-bottom: toRem(20);
+    color: #000;
+    font-size: toRem(20);
+    font-weight: 800;
+    line-height: 135%; /* 135% */
+    letter-spacing: 0.36px;
+  }
+
+  ul {
+    color: #000;
+    font-size: toRem(18);
+    font-weight: 400;
+    line-height: 120%; /* 21.6px */
+    letter-spacing: 0.18px;
+    li {
+      &:not(:last-child) {
+        margin-bottom: toRem(2);
+      }
+    }
+  }
+
+  &__button {
+    @include adaptiveValue("margin-top", 50, 35);
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+}

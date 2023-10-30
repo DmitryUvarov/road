@@ -35,3 +35,26 @@
     }
   }
 }
+
+//========================================================================================================================================================
+
+.pagination {
+  display: flex;
+  gap: toRem(10);
+  .swiper-pagination-bullet {
+    width: toRem(10);
+    height: 10px;
+    background-color: rgba(38, 38, 38, 0.6);
+    border-radius: 50%;
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #262626;
+      }
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #262626;
+  }
+}

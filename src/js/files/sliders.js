@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, Mousewheel, Navigation, Pagination, Thumbs } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay,
@@ -150,6 +150,43 @@ function initSliders() {
         }
 
     }
+
+	////////////////////
+
+
+	if (document.querySelector('.product__slider')) {
+		const productTrumbSlider = new Swiper('.product__slider-trumb', {
+			modules: [Mousewheel],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 44,
+			speed: 300,
+			mousewheel: true,
+			direction: 'vertical',
+			lazyPreloaderClass: 'preloader',
+		});
+
+		new Swiper('.product__slider', {
+			modules: [Thumbs, Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 20,
+			speed: 800,
+			lazyPreloaderClass: 'preloader',
+
+			pagination: {
+				el: '.product__slider-pagination',
+				clickable: true,
+			},
+
+			thumbs: {
+				swiper: productTrumbSlider,
+			},
+		});
+	}
+
 
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
