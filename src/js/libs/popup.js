@@ -34,8 +34,8 @@ class Popup {
 			closeEsc: true, // Закриття ESC
 			bodyLock: true, // Блокування скролла
 			hashSettings: {
-				location: true, // Хеш в адресному рядку
-				goHash: true, // Перехід по наявності в адресному рядку
+				location: false, // Хеш в адресному рядку
+				goHash: false, // Перехід по наявності в адресному рядку
 			},
 			on: { // Події
 				beforeOpen: function () { },
@@ -285,7 +285,7 @@ class Popup {
 			this.isOpen = false;
 		}
 		// Очищення адресного рядка
-		this._removeHash();
+		// this._removeHash();
 		if (this._selectorOpen) {
 			this.lastClosed.selector = this.previousOpen.selector;
 			this.lastClosed.element = this.previousOpen.element;
@@ -306,7 +306,7 @@ class Popup {
 
 		this.popupLogging(`Закрив попап`);
 	}
-	// Отримання хешу 
+	// Отримання хешу
 	_getHash() {
 		if (this.options.hashSettings.location) {
 			this.hash = this.targetOpen.selector.includes('#') ?
