@@ -45,6 +45,7 @@ function initSliders() {
 
 						speed: 2000,
 						loop: true,
+						loopAdditionalSlides: 5,
 						allowTouchMove: false,
 
 						autoplay: {
