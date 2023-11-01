@@ -226,6 +226,10 @@
     @media (max-width: em(850)) {
       flex: 1 1 100%;
     }
+
+    @media (max-width: em(660)) {
+      min-height: toRem(150);
+    }
   }
 
   &__title {
