@@ -1,0 +1,112 @@
+.form {
+  background: linear-gradient(283deg, #cc1515 1.28%, #262626 19.11%);
+  @include adaptiveValue("padding-top", 157, 60);
+  @include adaptiveValue("padding-bottom", 70, 60);
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    column-gap: toRem(30);
+    row-gap: toRem(40);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    color: #fff;
+    @include adaptiveValue("font-size", 50, 30);
+    font-weight: 800;
+    line-height: 130%; /* 65px */
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 50, 25);
+    }
+  }
+
+  &__text {
+    max-width: toRem(515);
+    color: #fff;
+    @include adaptiveValue("font-size", 30, 22);
+    font-weight: 600;
+    line-height: 130%; /* 39px */
+    letter-spacing: 0.36px;
+  }
+
+  &__form {
+    flex: 0 0 toRem(430);
+  }
+}
+
+//========================================================================================================================================================
+
+.form-contact {
+  &__input {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 30);
+    }
+  }
+  &__button {
+    @include adaptiveValue("margin-top", 20, 10);
+    border-radius: 0;
+  }
+
+  &__upload {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 30);
+    }
+  }
+
+  &__file {
+    display: none;
+  }
+  &__upload-button {
+    width: 100%;
+    display: block;
+    border-bottom: toRem(1) solid #fff;
+    background-color: transparent;
+
+    color: #fff;
+    font-family: Inter;
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    column-gap: toRem(10);
+    cursor: pointer;
+
+    &::before {
+      @include adaptiveValue("font-size", 20, 18);
+      color: #ffffff;
+    }
+  }
+}
+
+.form-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(toRem(130), 1fr));
+  gap: toRem(10);
+  margin-top: toRem(10);
+
+  &__item {
+    img {
+      max-width: 100%;
+    }
+
+    span {
+      display: block;
+      margin-top: toRem(5);
+      color: #ffffff;
+      font-size: toRem(12);
+    }
+  }
+}

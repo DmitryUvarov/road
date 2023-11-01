@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Форма заявки"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{
+        "header_class":"header_noabsolute"
+        })
+        <main class="page">
+
+            <section class="form">
+                <div class="form__container">
+                    <div class="form__body">
+                        <div class="form__content">
+                            <h1 class="form__title">Оставьте свои контактные данные и детали заказа.</h1>
+                            <div class="form__text">Наш менеджер свяжется
+                                с вами в ближайшее время!</div>
+                        </div>
+                        <form action="#" class="form__form form-contact">
+                            <input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя*" class="form-contact__input input">
+                            <input autocomplete="off" type="text" name="form[]" placeholder="Ваш телефон*" class="form-contact__input input">
+                            <input autocomplete="off" type="text" name="form[]" placeholder="VIN-номер*" class="form-contact__input input">
+                            <input autocomplete="off" type="text" name="form[]" placeholder="Необходимая деталь*" class="form-contact__input input">
+
+                            <div data-upload class="form-contact__upload">
+                                <input data-upload-input class="form-contact__file" id="file1" type="file" multiple accept="image/png, image/jpeg, image/jpg">
+                                <label for="file1" type="button" class="form-contact__upload-button _icon-plus">Фото детали*</label>
+                                <div data-upload-content class="form-contact__preview form-preview"></div>
+                            </div>
+                            <div data-upload class="form-contact__upload">
+                                <input data-upload-input class="form-contact__file" id="file2" type="file" multiple accept="image/png, image/jpeg, image/jpg">
+                                <label for="file2" type="button" class="form-contact__upload-button _icon-plus">Фото специального номера детали*</label>
+                                <div data-upload-content class="form-contact__preview form-preview"></div>
+                            </div>
+
+                            <input autocomplete="off" type="text" name="form[]" placeholder="Комментарий к заказу*" class="form-contact__input input">
+                            <button class="form-contact__button button">Оставить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

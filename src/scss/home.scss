@@ -9,8 +9,19 @@
     @include adaptiveValue("padding-top", 350, 155);
     @include adaptiveValue("padding-bottom", 155, 100);
 
+    min-height: toRem(810);
+
     @media (max-width: $tablet) {
       min-height: 100svh;
+    }
+
+    &_center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include adaptiveValue("padding-top", 175, 155);
+      @include adaptiveValue("padding-bottom", 155, 155);
     }
   }
 
@@ -422,7 +433,7 @@
   }
 
   &__link {
-    margin-top: toRem(20);
+    @include adaptiveValue("margin-top", 40, 20);
   }
 }
 

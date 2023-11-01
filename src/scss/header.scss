@@ -4,6 +4,7 @@
   width: 100%;
   top: 0;
   background-color: #fff;
+  z-index: 2;
 
   @media (max-width: $mobile) {
     &::before {
@@ -59,6 +60,12 @@
 
     img {
       max-width: 100%;
+    }
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 
