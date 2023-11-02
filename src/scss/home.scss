@@ -6,7 +6,7 @@
 
   &__body {
     color: #fff;
-    @include adaptiveValue("padding-top", 350, 155);
+    @include adaptiveValue("padding-top", 350, 175);
     @include adaptiveValue("padding-bottom", 155, 100);
 
     min-height: toRem(810);
@@ -38,6 +38,7 @@
   }
 
   &__text {
+    max-width: toRem(589);
     @include adaptiveValue("font-size", 18, 16);
     line-height: 120%; /* 21.6px */
     letter-spacing: 0.18px;

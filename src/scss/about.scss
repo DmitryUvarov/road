@@ -24,7 +24,11 @@
     overflow: hidden;
     min-height: toRem(350);
     border-radius: 30px;
-    padding: toRem(45) toRem(20) toRem(55);
+
+    padding-bottom: toRem(55);
+    padding-left: toRem(30);
+    padding-right: toRem(30);
+    @include adaptiveValue("padding-top", 45, 30);
     background: linear-gradient(142deg, #cc1515 2.95%, #262626 46.27%);
 
     display: flex;
@@ -34,8 +38,11 @@
     }
 
     &_1 {
-      align-items: flex-end;
       background: linear-gradient(142deg, #cc1515 2.95%, #262626 46.27%);
+
+      @media (min-width: em(600)) {
+        align-items: flex-end;
+      }
 
       .advantages__item-image {
         width: 100%;
@@ -50,7 +57,9 @@
     }
 
     &_2 {
-      align-items: flex-end;
+      @media (min-width: em(600)) {
+        align-items: flex-end;
+      }
 
       background: linear-gradient(248deg, #cc1515 1.53%, #262626 33.14%);
 
@@ -197,7 +206,7 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 20.8px; /* 130% */
-    min-height: toRem(258);
+    @include adaptiveValue("min-height", 258, 200);
     padding: toRem(22) toRem(10);
     display: flex;
     flex-direction: column;
@@ -214,6 +223,12 @@
       font-weight: 800;
       line-height: 48px; /* 150% */
       letter-spacing: 0.32px;
+    }
+  }
+
+  &__item-text {
+    @media (min-width: em(500)) {
+      flex: 0 1 toRem(42);
     }
   }
 }
