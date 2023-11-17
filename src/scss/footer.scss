@@ -4,6 +4,8 @@
   @include adaptiveValue("padding-top", 60, 30);
   @include adaptiveValue("padding-bottom", 45, 30);
   &__container {
+    display: grid;
+    @include adaptiveValue("gap", 30, 20);
   }
 
   &__body {
@@ -64,12 +66,36 @@
   }
 
   &__social {
-    @include adaptiveValue("margin-top", 60, 30);
+    @include adaptiveValue("margin-top", 30, 10);
     margin-left: auto;
     justify-content: flex-end;
 
     @media (max-width: $mobile) {
       justify-content: center;
+    }
+  }
+
+  &__copy {
+    color: #fff;
+    line-height: 125%;
+    font-size: toRem(16);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+
+    a {
+      transition: all 0.3s ease 0s;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: #cc1515;
+        }
+      }
     }
   }
 }
